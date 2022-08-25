@@ -1,0 +1,9 @@
+---- hosts: localhost
+  connection: local
+  become: true
+  tasks:  
+  - name: "Clone git repo"
+    git:      
+    repo: "{{ github_repo }}"      
+    dest: /home/ubuntu/repo/
+      update: true
